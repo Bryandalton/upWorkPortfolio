@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "./NavBar";
 import Project from "./project";
 import styled from "styled-components";
 
@@ -22,7 +21,7 @@ const HandleLeft = styled.button`
   opacity: 10%;
   z-index: 10;
   margin: var(--img-gap) 0;
-  width: var(--handle-size);
+  width: 3vw;
   cursor: pointer;
   font-size: 5rem;
   display: flex;
@@ -33,7 +32,7 @@ const HandleLeft = styled.button`
   transition: background-color 150ms ease-in-out;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  :hover {
+  &:hover {
     opacity: 90%;
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -58,7 +57,7 @@ const HandleRight = styled.button`
   transition: background-color 150ms ease-in-out;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  :hover {
+  &:hover {
     opacity: 90%;
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -168,7 +167,7 @@ export default function Carousel() {
     <>
       <CHeader>My projects:</CHeader>
       <CContainer>
-        <HandleLeft onClick={onPrevClick}>&#8249;</HandleLeft>
+        <HandleLeft onClick={onPrevClick}><div>&#8249;</div></HandleLeft>
         <Slider>
           {projects.map((project) => {
             return (

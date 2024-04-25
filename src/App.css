@@ -1,13 +1,19 @@
 :root {
-  --handle-size: 3rem;
+  --handle-size: .5rem;
   --img-gap: .25rem;
   --items-per-screen: 3;
 }
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+#git {
+  height: 64px;
+  opacity: 15%;
+}
+
+#git:hover {
+  opacity: 100%;
 }
 
 .logo {

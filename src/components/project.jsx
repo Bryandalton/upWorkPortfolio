@@ -5,7 +5,8 @@ const ProjectDiv = styled.div`
   margin: 0.5rem;
   flex: 0 0 calc(100% / var(--items-per-screen));
   max-width: calc(100% / var(--items-per-screen));
-  :hover {
+  max-height: 60vh;
+  &:hover {
     box-shadow: 4px 4px 5px darkgray;
     border-radius: 1rem;
     background: linear-gradient(
@@ -46,7 +47,7 @@ const ProjectLink = styled.a`
     padding: var(--img-gap);
     border-radius: 1rem;
   }
-  :hover {
+  &:hover {
     text-decoration: underline;
   }
 `;
