@@ -21,9 +21,9 @@ const HandleLeft = styled.button`
   opacity: 10%;
   z-index: 10;
   margin: var(--img-gap) 0;
-  width: 3vw;
+  width: var(--handle-size);
   cursor: pointer;
-  font-size: 5rem;
+  /* font-size: 5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ const HandleRight = styled.button`
   margin: var(--img-gap) 0;
   width: var(--handle-size);
   cursor: pointer;
-  font-size: 5rem;
+  /* font-size: 5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,6 +62,10 @@ const HandleRight = styled.button`
     background-color: rgba(255, 255, 255, 0.5);
   }
 `;
+
+const BDiv = styled.div`
+font-size: 7rem;
+`
 
 const Slider = styled.div`
   display: flex;
@@ -167,7 +171,7 @@ export default function Carousel() {
     <>
       <CHeader>My projects:</CHeader>
       <CContainer>
-        <HandleLeft onClick={onPrevClick}><div>&#8249;</div></HandleLeft>
+        <HandleLeft onClick={onPrevClick}><BDiv>&#8249;</BDiv></HandleLeft>
         <Slider>
           {projects.map((project) => {
             return (
@@ -183,7 +187,7 @@ export default function Carousel() {
             );
           })}
         </Slider>
-        <HandleRight onClick={onNextClick}>&#8250;</HandleRight>
+        <HandleRight onClick={onNextClick}><BDiv>&#8250;</BDiv></HandleRight>
       </CContainer>
     </>
   );
