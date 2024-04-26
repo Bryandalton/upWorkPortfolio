@@ -67,9 +67,6 @@ export default function Project(props) {
         <img src={props.img} alt={props.name} />
         <p>{props.name}</p>
       </ProjectLink>
-      <ProjectLink href={props.github}>
-        <img id="git" alt="Github" src="./images/github-white.png"></img>
-      </ProjectLink>
       <Type>{props.type}</Type>
       <Description>{props.description}</Description>
     </ProjectDiv>
