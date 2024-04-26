@@ -23,7 +23,6 @@ const HandleLeft = styled.button`
   margin: var(--img-gap) 0;
   width: var(--handle-size);
   cursor: pointer;
-  /* font-size: 5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +47,6 @@ const HandleRight = styled.button`
   margin: var(--img-gap) 0;
   width: var(--handle-size);
   cursor: pointer;
-  /* font-size: 5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,8 +62,8 @@ const HandleRight = styled.button`
 `;
 
 const BDiv = styled.div`
-font-size: 7rem;
-`
+  font-size: 7rem;
+`;
 
 const Slider = styled.div`
   display: flex;
@@ -171,7 +169,9 @@ export default function Carousel() {
     <>
       <CHeader>My projects:</CHeader>
       <CContainer>
-        <HandleLeft onClick={onPrevClick}><BDiv>&#8249;</BDiv></HandleLeft>
+        <HandleLeft onClick={onPrevClick}>
+          <BDiv>&#8249;</BDiv>
+        </HandleLeft>
         <Slider>
           {projects.map((project) => {
             return (
@@ -180,14 +180,15 @@ export default function Carousel() {
                 link={project.link}
                 img={project.img}
                 name={project.name}
-                github={project.github}
                 type={project.type}
                 description={project.description}
               />
             );
           })}
         </Slider>
-        <HandleRight onClick={onNextClick}><BDiv>&#8250;</BDiv></HandleRight>
+        <HandleRight onClick={onNextClick}>
+          <BDiv>&#8250;</BDiv>
+        </HandleRight>
       </CContainer>
     </>
   );
