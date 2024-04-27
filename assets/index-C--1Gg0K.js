@@ -107,7 +107,6 @@ Error generating stack: `+o.message+`
   margin: var(--img-gap) 0;
   width: var(--handle-size);
   cursor: pointer;
-  /* font-size: 5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +130,6 @@ Error generating stack: `+o.message+`
   margin: var(--img-gap) 0;
   width: var(--handle-size);
   cursor: pointer;
-  /* font-size: 5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,14 +143,14 @@ Error generating stack: `+o.message+`
     background-color: rgba(255, 255, 255, 0.5);
   }
 `,ga=De.div`
-font-size: 7rem;
+  font-size: 7rem;
 `,Um=De.div`
   display: flex;
   flex-grow: 1;
   margin: 0 var(--img-gap);
   transform: translateX(calc(var(--slider-index) * -100%));
   transition: transform 250ms ease-in-out;
-`,ya=[{img:"./images/mfhf.PNG",name:"My Favorite Historical Figures",link:"https://bryandalton.github.io/my_favorite_historical_figure/",github:"https://github.com/Bryandalton/my_favorite_historical_figure",type:"Website: React",description:"React site that offers a list of historical figures, shows a map of a location important to the active figure, and has a collapsible profile for the active figure."},{img:"./images/cryptsndbrd.PNG",name:"Cryptid Sound Board",link:"https://bryandalton.github.io/cryptidsoundboard/",github:"https://github.com/Bryandalton/cryptidsoundboard",type:"Website: React",description:"A fun and responsive site to see what sounds cryptids might make!"},{img:"./images/kandy-karma.JPG",name:"Kandy Karma",link:"https://bryandalton.github.io/kandykarmafrontend/",github:"https://github.com/Bryandalton/kandykarmafrontend",type:"Website: React ",description:"Mock market research site for candy."},{img:"./images/WeatherServiceScreenshot.jpg",name:"Weather Service",link:"https://bryandalton.github.io/Weather-service/",github:"https://github.com/Bryandalton/Weather-service",type:"Website",description:"Displays the weather, five day forecast, and remembers last city selected."},{img:"./images/Bigfootbutton.jpg",name:"Bigfoot Button",link:"https://codepen.io/Iwritebadcode/full/mdXdxpz",github:"https://codepen.io/Iwritebadcode/pen/mdXdxpz",type:"Website",description:'Neon button that plays a "bigfoot" noise when clicked.'},{img:"./images/Paint Your Mood.png",name:"Paint your mood",link:"https://bryandalton.github.io/Paint-your-mood/",github:"https://github.com/Bryandalton/Paint-your-mood",type:"Website",description:"Website to display artwork from Chicago and Harvard art APIs."}];function Bm(){const[e,t]=nt.useState(0);nt.useEffect(()=>{document.documentElement.style.setProperty("--slider-index",e)},[e]);const n=()=>{t(c=>c+1)},r=()=>{t(c=>c-1)},l=ya.length,[o,i]=nt.useState(0),u=()=>{const c=parseInt(getComputedStyle(document.documentElement).getPropertyValue("--items-per-screen"));i(c)};nt.useEffect(()=>{u()},[]);const s=l/o;return e>s-1&&t(0),e<0&&t(s-1),V.jsxs(V.Fragment,{children:[V.jsx(Dm,{children:"My projects:"}),V.jsxs(Mm,{children:[V.jsx(Fm,{onClick:r,children:V.jsx(ga,{children:"‹"})}),V.jsx(Um,{children:ya.map(c=>V.jsx(jm,{link:c.link,img:c.img,name:c.name,github:c.github,type:c.type,description:c.description},c.name))}),V.jsx(Am,{onClick:n,children:V.jsx(ga,{children:"›"})})]})]})}const Wm=De.div`
+`,ya=[{img:"./images/mfhf.PNG",name:"My Favorite Historical Figures",link:"https://bryandalton.github.io/my_favorite_historical_figure/",github:"https://github.com/Bryandalton/my_favorite_historical_figure",type:"Website: React",description:"React site that offers a list of historical figures, shows a map of a location important to the active figure, and has a collapsible profile for the active figure."},{img:"./images/cryptsndbrd.PNG",name:"Cryptid Sound Board",link:"https://bryandalton.github.io/cryptidsoundboard/",github:"https://github.com/Bryandalton/cryptidsoundboard",type:"Website: React",description:"A fun and responsive site to see what sounds cryptids might make!"},{img:"./images/kandy-karma.JPG",name:"Kandy Karma",link:"https://bryandalton.github.io/kandykarmafrontend/",github:"https://github.com/Bryandalton/kandykarmafrontend",type:"Website: React ",description:"Mock market research site for candy."},{img:"./images/WeatherServiceScreenshot.jpg",name:"Weather Service",link:"https://bryandalton.github.io/Weather-service/",github:"https://github.com/Bryandalton/Weather-service",type:"Website",description:"Displays the weather, five day forecast, and remembers last city selected."},{img:"./images/Bigfootbutton.jpg",name:"Bigfoot Button",link:"https://codepen.io/Iwritebadcode/full/mdXdxpz",github:"https://codepen.io/Iwritebadcode/pen/mdXdxpz",type:"Website",description:'Neon button that plays a "bigfoot" noise when clicked.'},{img:"./images/Paint Your Mood.png",name:"Paint your mood",link:"https://bryandalton.github.io/Paint-your-mood/",github:"https://github.com/Bryandalton/Paint-your-mood",type:"Website",description:"Website to display artwork from Chicago and Harvard art APIs."}];function Bm(){const[e,t]=nt.useState(0);nt.useEffect(()=>{document.documentElement.style.setProperty("--slider-index",e)},[e]);const n=()=>{t(c=>c+1)},r=()=>{t(c=>c-1)},l=ya.length,[o,i]=nt.useState(0),u=()=>{const c=parseInt(getComputedStyle(document.documentElement).getPropertyValue("--items-per-screen"));i(c)};nt.useEffect(()=>{u()},[]);const s=l/o;return e>s-1&&t(0),e<0&&t(s-1),V.jsxs(V.Fragment,{children:[V.jsx(Dm,{children:"My projects:"}),V.jsxs(Mm,{children:[V.jsx(Fm,{onClick:r,children:V.jsx(ga,{children:"‹"})}),V.jsx(Um,{children:ya.map(c=>V.jsx(jm,{link:c.link,img:c.img,name:c.name,type:c.type,description:c.description},c.name))}),V.jsx(Am,{onClick:n,children:V.jsx(ga,{children:"›"})})]})]})}const Wm=De.div`
   margin: 0;
   display: flex;
   flex-direction: column-reverse;
