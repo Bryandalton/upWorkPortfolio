@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const ProjectDiv = styled.div`
   margin: 0.5rem;
-  flex: 0 0 calc(100% / var(--items-per-screen));
-  max-width: calc(100% / var(--items-per-screen));
+  flex: 0 0 calc((100% / var(--items-per-screen)) - 1rem);
+  max-width: calc((100% / var(--items-per-screen)) - 1rem);
+  /* border: solid 2px white; */
   &:hover {
     box-shadow: 4px 4px 5px darkgray;
     border-radius: 1rem;

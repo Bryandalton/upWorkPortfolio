@@ -71,6 +71,7 @@ const Slider = styled.div`
   margin: 0 var(--img-gap);
   transform: translateX(calc(var(--slider-index) * -100%));
   transition: transform 250ms ease-in-out;
+  /* border: 2px solid red; */
 `;
 
 const projects = [
